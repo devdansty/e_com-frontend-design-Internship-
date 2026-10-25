@@ -1,0 +1,275 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   VYRO Design System — Foundational Tokens
+   ============================================================
+   All design values are centralized here as CSS custom properties.
+   Components should reference these tokens (via Tailwind utilities
+   mapped in tailwind.config.ts or directly as var(--token-name))
+   rather than hard-coding color/spacing values.
+   ============================================================ */
+
+:root {
+  /* ── Brand / Accent ─────────────────────────────────────── */
+  --vyro-accent:            #00E5CC;   /* Electric cyan-mint  */
+  --vyro-accent-hover:      #00CDB6;
+  --vyro-accent-muted:      rgba(0, 229, 204, 0.12);
+
+  /* ── Surfaces ───────────────────────────────────────────── */
+  --vyro-bg:                #FAFAFA;   /* Page background     */
+  --vyro-surface:           #FFFFFF;   /* Cards, modals       */
+  --vyro-surface-elevated:  #FFFFFF;   /* Elevated cards      */
+  --vyro-surface-overlay:   rgba(0, 0, 0, 0.45);
+
+  /* ── Text ───────────────────────────────────────────────── */
+  --vyro-text-primary:      #1A1A2E;   /* Deep charcoal       */
+  --vyro-text-secondary:    #6B7280;   /* Medium grey         */
+  --vyro-text-muted:        #9CA3AF;   /* Lighter grey        */
+  --vyro-text-inverse:      #FFFFFF;   /* On dark backgrounds */
+  --vyro-text-accent:       #009E8E;   /* Accent-on-light     */
+
+  /* ── Borders ────────────────────────────────────────────── */
+  --vyro-border:            #E5E7EB;
+  --vyro-border-strong:     #D1D5DB;
+  --vyro-border-focus:      #00E5CC;
+
+  /* ── State ──────────────────────────────────────────────── */
+  --vyro-success:           #10B981;
+  --vyro-success-bg:        rgba(16, 185, 129, 0.08);
+  --vyro-warning:           #F59E0B;
+  --vyro-warning-bg:        rgba(245, 158, 11, 0.08);
+  --vyro-error:             #EF4444;
+  --vyro-error-bg:          rgba(239, 68, 68, 0.08);
+
+  /* ── Focus ring ─────────────────────────────────────────── */
+  --vyro-ring:              rgba(0, 229, 204, 0.45);
+  --vyro-ring-offset:       2px;
+
+  /* ── Shadows ────────────────────────────────────────────── */
+  --vyro-shadow-xs:         0 1px 2px rgba(0, 0, 0, 0.04);
+  --vyro-shadow-sm:         0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --vyro-shadow-md:         0 4px 6px -1px rgba(0, 0, 0, 0.06), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
+  --vyro-shadow-lg:         0 10px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+  --vyro-shadow-xl:         0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+
+  /* ── Typography ─────────────────────────────────────────── */
+  --vyro-font-sans:         'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --vyro-font-mono:         ui-monospace, 'SF Mono', 'Cascadia Code', 'Consolas', monospace;
+
+  --vyro-text-xs:           0.75rem;    /* 12px */
+  --vyro-text-sm:           0.875rem;   /* 14px */
+  --vyro-text-base:         1rem;       /* 16px */
+  --vyro-text-lg:           1.125rem;   /* 18px */
+  --vyro-text-xl:           1.25rem;    /* 20px */
+  --vyro-text-2xl:          1.5rem;     /* 24px */
+  --vyro-text-3xl:          1.875rem;   /* 30px */
+  --vyro-text-4xl:          2.25rem;    /* 36px */
+  --vyro-text-5xl:          3rem;       /* 48px */
+  --vyro-text-6xl:          3.75rem;    /* 60px */
+
+  --vyro-leading-tight:     1.15;
+  --vyro-leading-snug:      1.3;
+  --vyro-leading-normal:    1.5;
+  --vyro-leading-relaxed:   1.65;
+
+  --vyro-tracking-tight:    -0.025em;
+  --vyro-tracking-normal:   0em;
+  --vyro-tracking-wide:     0.05em;
+  --vyro-tracking-wider:    0.1em;
+
+  /* ── Spacing ────────────────────────────────────────────── */
+  --vyro-space-1:           0.25rem;    /*  4px */
+  --vyro-space-2:           0.5rem;     /*  8px */
+  --vyro-space-3:           0.75rem;    /* 12px */
+  --vyro-space-4:           1rem;       /* 16px */
+  --vyro-space-5:           1.25rem;    /* 20px */
+  --vyro-space-6:           1.5rem;     /* 24px */
+  --vyro-space-8:           2rem;       /* 32px */
+  --vyro-space-10:          2.5rem;     /* 40px */
+  --vyro-space-12:          3rem;       /* 48px */
+  --vyro-space-16:          4rem;       /* 64px */
+  --vyro-space-20:          5rem;       /* 80px */
+  --vyro-space-24:          6rem;       /* 96px */
+
+  /* ── Radii ──────────────────────────────────────────────── */
+  --vyro-radius-none:       0;
+  --vyro-radius-sm:         0.25rem;    /*  4px */
+  --vyro-radius-md:         0.5rem;     /*  8px */
+  --vyro-radius-lg:         0.75rem;    /* 12px */
+  --vyro-radius-xl:         1rem;       /* 16px */
+  --vyro-radius-full:       9999px;
+
+  /* ── Content widths ─────────────────────────────────────── */
+  --vyro-width-sm:          640px;
+  --vyro-width-md:          768px;
+  --vyro-width-lg:          1024px;
+  --vyro-width-xl:          1280px;
+  --vyro-width-2xl:         1440px;
+
+  /* ── Transitions ────────────────────────────────────────── */
+  --vyro-duration-fast:     100ms;
+  --vyro-duration-normal:   200ms;
+  --vyro-duration-slow:     350ms;
+  --vyro-easing:            cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+/* ============================================================
+   BASE / RESET
+   ============================================================ */
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+    font-size: 100%; /* Respect user's browser setting */
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--vyro-font-sans);
+    font-size: var(--vyro-text-base);
+    line-height: var(--vyro-leading-normal);
+    color: var(--vyro-text-primary);
+    background-color: var(--vyro-bg);
+    min-height: 100dvh;
+  }
+
+  /* ── Typography baseline ────────────────────────────────── */
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: 600;
+    line-height: var(--vyro-leading-tight);
+    letter-spacing: var(--vyro-tracking-tight);
+    color: var(--vyro-text-primary);
+  }
+
+  h1 { font-size: var(--vyro-text-5xl); }
+  h2 { font-size: var(--vyro-text-4xl); }
+  h3 { font-size: var(--vyro-text-3xl); }
+  h4 { font-size: var(--vyro-text-2xl); }
+  h5 { font-size: var(--vyro-text-xl);  }
+  h6 { font-size: var(--vyro-text-lg);  }
+
+  p {
+    margin: 0;
+    line-height: var(--vyro-leading-relaxed);
+  }
+
+  /* ── Links ──────────────────────────────────────────────── */
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: color var(--vyro-duration-fast) var(--vyro-easing);
+  }
+
+  a:hover {
+    color: var(--vyro-text-accent);
+  }
+
+  /* ── Buttons baseline ───────────────────────────────────── */
+
+  button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
+    padding: 0;
+  }
+
+  /* ── Images ─────────────────────────────────────────────── */
+
+  img,
+  picture,
+  video,
+  svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* ── Inputs ─────────────────────────────────────────────── */
+
+  input,
+  textarea,
+  select {
+    font: inherit;
+    color: inherit;
+  }
+
+  /* ── Focus visibility ───────────────────────────────────── */
+
+  :focus-visible {
+    outline: 2px solid var(--vyro-border-focus);
+    outline-offset: var(--vyro-ring-offset);
+    border-radius: var(--vyro-radius-sm);
+  }
+
+  /* Remove focus outline for mouse users */
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  /* ── Selection ──────────────────────────────────────────── */
+
+  ::selection {
+    background-color: var(--vyro-accent-muted);
+    color: var(--vyro-text-primary);
+  }
+
+  /* ── Scrollbar ──────────────────────────────────────────── */
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--vyro-border);
+    border-radius: var(--vyro-radius-full);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--vyro-border-strong);
+  }
+
+  /* ── App root ───────────────────────────────────────────── */
+
+  #root {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    isolation: isolate; /* New stacking context */
+  }
+}
